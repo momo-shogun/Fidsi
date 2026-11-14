@@ -1,6 +1,6 @@
 <!----preloader----->
          <div class="preloader-wrap">
-            <div class="preloader" style="background-image:url(assets/images/preloader.gif)">
+            <div class="preloader" style="background-image:url(/assets/images/preloader.gif)">
             </div>
             <div class="overlay"></div>
          </div>
@@ -33,9 +33,9 @@
                   <div class="row align-items-center">
                      <div class="col-lg-3 col-md-9 col-sm-9 col-xs-9 logo_column">
                         <div class="header_logo_box">
-                           <a href="../" class="logo navbar-brand">
-                              <img src="assets/images/logo/Fidsi-logo-black.png" alt="Creote Elementor" class="logo_default">
-                              <img src="assets/images/logo/Fidsi-logo-black.png" alt="Creote Elementor" class="logo__sticky">
+                           <a href="/" class="logo navbar-brand">
+                              <img src="/assets/images/logo/Fidsi-logo-black.png" alt="Creote Elementor" class="logo_default">
+                              <img src="/assets/images/logo/Fidsi-logo-black.png" alt="Creote Elementor" class="logo__sticky">
                            </a>
                         </div>
                      </div>
@@ -51,25 +51,25 @@
                                  <ul id="myNavbar" class="navbar_nav">
                                     
 
-                                    <!--<li><a href="../" class="dropdown-toggle nav-link"><span>Home</span></a></li>-->
-                                    <!--<li><a href="about-us.php" class="dropdown-toggle nav-link"><span>About Us</span></a></li>-->
+                                    <!--<li><a href="/" class="dropdown-toggle nav-link"><span>Home</span></a></li>-->
+                                    <!--<li><a href="/about-us.php" class="dropdown-toggle nav-link"><span>About Us</span></a></li>-->
                                      <li class="menu-item  menu-item-has-children dropdown nav-item">
                                        <a href="javascript:void(0);" class="dropdown-toggle nav-link">
                                           <span>About</span>
                                        </a>
                                        <ul class="dropdown-menu">
                                           <li class="menu-item nav-item">
-                                             <a href="about-us.php" class="dropdown-item nav-link">
+                                             <a href="/about-us.php" class="dropdown-item nav-link">
                                                 <span>About Us</span>
                                              </a>
                                           </li>
                                           <li class="menu-item nav-item">
-                                             <a href="governingboard.php" class="dropdown-item nav-link">
+                                             <a href="/governingboard.php" class="dropdown-item nav-link">
                                                 <span>Governing Body</span>
                                              </a>
                                           </li>
                                           <li class="menu-item nav-item">
-                                             <a href="meet-our-team.php" class="dropdown-item nav-link">
+                                             <a href="/meet-our-team.php" class="dropdown-item nav-link">
                                                 <span>Meet Our Team</span>
                                              </a>
                                           </li>
@@ -83,25 +83,25 @@
                                        <ul class="dropdown-menu">
                                           
                                           <li class="menu-item nav-item">
-                                             <a href="members.php" class="dropdown-item nav-link">
+                                             <a href="/members.php" class="dropdown-item nav-link">
                                                 <span>Our Members</span>
                                              </a>
                                           </li>
                                           <li class="menu-item nav-item">
-                                             <a href="code-of-conduct.php" class="dropdown-item nav-link">
+                                             <a href="/code-of-conduct.php" class="dropdown-item nav-link">
                                                 <span>Code of Conduct</span>
                                              </a>
                                           </li>
                                          <!--<li class="menu-item  nav-item">-->
-                                         <!--    <a href="governingboard.php" class="dropdown-item nav-link">-->
+                                         <!--    <a href="/governingboard.php" class="dropdown-item nav-link">-->
                                          <!--       <span>Governing Board</span>-->
                                          <!--    </a>-->
                                          <!-- </li>-->
                                        </ul>
                                     </li>
-                                    <!--<li><a href="members.php" class="dropdown-toggle nav-link"><span>Our Members</span></a></li>-->
-                                    <!--<li><a href="governingboard.php" class="dropdown-toggle nav-link"><span>Governing Board</span></a></li>-->
-                                    <li><a href="regulationsandcompliance.php" class="dropdown-toggle nav-link"><span>Regulations & Compliance </span></a></li>
+                                    <!--<li><a href="/members.php" class="dropdown-toggle nav-link"><span>Our Members</span></a></li>-->
+                                    <!--<li><a href="/governingboard.php" class="dropdown-toggle nav-link"><span>Governing Board</span></a></li>-->
+                                    <li><a href="/regulationsandcompliance.php" class="dropdown-toggle nav-link"><span>Regulations & Compliance </span></a></li>
                                     
                                     <li class="menu-item  menu-item-has-children dropdown nav-item">
                                        <a href="javascript:void(0);" class="dropdown-toggle nav-link">
@@ -109,17 +109,22 @@
                                        </a>
                                        <ul class="dropdown-menu">
                                           <li class="menu-item  nav-item">
-                                             <a href="government-industry-collaboration.php" class="dropdown-item nav-link">
+                                             <a href="/government-industry-collaboration.php" class="dropdown-item nav-link">
                                                 <span>Government Industry Collaboration</span>
                                              </a>
                                           </li>
                                           <li class="menu-item  nav-item">
-                                             <a href="news.php" class="dropdown-item nav-link">
+                                             <a href="/news.php" class="dropdown-item nav-link">
                                                 <span>News</span>
                                              </a>
                                           </li>
                                           <li class="menu-item nav-item">
-                                             <a href="gallery.php" class="dropdown-item nav-link">
+                                             <a href="/blog" class="dropdown-item nav-link">
+                                                <span>Blog</span>
+                                             </a>
+                                          </li>
+                                          <li class="menu-item nav-item">
+                                             <a href="/gallery.php" class="dropdown-item nav-link">
                                                 <span>Gallery</span>
                                              </a>
                                           </li>
@@ -129,7 +134,7 @@
                                     <li class="menu-item  menu-item-has-children dropdown nav-item">  <a href="javascript:void(0);" class="dropdown-toggle nav-link"><span>Report</span> </a>
                                        <ul class="dropdown-menu">
                                           <li class="menu-item  nav-item">
-                                             <a href="ds-industry-report.php" class="dropdown-item nav-link">
+                                             <a href="/ds-industry-report.php" class="dropdown-item nav-link">
                                                 <span>Direct Selling Industry Report</span>
                                              </a>
                                           </li>
@@ -137,7 +142,7 @@
                                          
                                        </ul>
                                     </li>
-                                     <li><a href="contact-us.php" class="dropdown-toggle nav-link"><span>Contact</span></a></li>
+                                     <li><a href="/contact-us.php" class="dropdown-toggle nav-link"><span>Contact</span></a></li>
                                  </ul>
                               </div>
                            </div>
@@ -147,7 +152,7 @@
                                  <!--   <button type="button" class="search-toggler"><i class="icon-search"></i></button>-->
                                  <!--</li>-->
                                  <li class="header-button">
-                                    <a href="joinfidsi.php" rel="" class="theme-btn one"> Join FIDSI </a>
+                                    <a href="/joinfidsi.php" rel="" class="theme-btn one"> Join FIDSI </a>
                                  </li>
                                  <!--<li>-->
                                  <!--   <button type="button" class="contact-toggler"><i class="icon-bar"></i></button>-->

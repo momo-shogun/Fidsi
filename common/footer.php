@@ -12,8 +12,8 @@
                      <div class="footer_widgets about_company light_color">
                         <div class="about_company_inner">
                            <div class="footer_logo">
-                              <a href="index.php" target="_blank" rel="nofollow">
-                                 <img src="assets/images/logo/Fidsi-logo-2 (2).png" class="img-fluid" alt="logo" />
+                              <a href="/" target="_blank" rel="nofollow">
+                                 <img src="/assets/images/logo/Fidsi-logo-2 (2).png" class="img-fluid" alt="logo" />
                               </a>
                               
                               <div class="pd_bottom_30"></div>
@@ -75,13 +75,13 @@
                            <div class="navigation_foo_inner">
 
                               <ul class="menu">
-                                 <li><a href="../">Home</a></li>
-                                 <li><a href="about-us.php">About Us</a></li>
+                                 <li><a href="/">Home</a></li>
+                                 <li><a href="/about-us.php">About Us</a></li>
                                  <!--<li><a href="members.php">Our Members</a></li>-->
                                  <!--<li><a href="governingboard.php">Governing Board</a></li>-->
-                                 <li><a href="newsletter.php">NewsLetter</a></li>
+                                 <li><a href="/newsletter.php">NewsLetter</a></li>
                              
-                                 <li><a href="gallery.php">Gallery</a></li>
+                                 <li><a href="/gallery.php">Gallery</a></li>
                               </ul>
                            </div>
                         </div>
@@ -104,10 +104,10 @@
                                  <ul class="menu">
                                    
                                       <!--<li><a href="govtletter.php">Govt Letter</a></li>-->
-                                 <li><a href="regulationsandcompliance.php">Acts and Rules</a></li>
-                                 <li><a href="news.php">News</a></li>
+                                 <li><a href="/regulationsandcompliance.php">Acts and Rules</a></li>
+                                 <li><a href="/news.php">News</a></li>
                                     <!--<li><a href="disclaimer.php">Disclaimer</a></li>-->
-                                    <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                                    <li><a href="/privacy-policy.php">Privacy Policy</a></li>
                                       
                                     
                                  </ul>
@@ -131,8 +131,9 @@
                            <div class="navigation_foo_inner">
 
                               <ul class="menu">
-                                 <li><a href="joinfidsi.php">Join FIDSI</a></li>
-                                 <li><a href="contact-us.php">Contact Us</a></li>
+                                 <li><a href="/joinfidsi.php">Join FIDSI</a></li>
+                                 <li><a href="/contact-us.php">Contact Us</a></li>
+                                 <li><a href="/blog">Blog</a></li>
                                  <!--<li><a href="#">Sitemap</a></li>-->
                               </ul>
 
@@ -141,6 +142,31 @@
                      </div>
                   </div>
                </div>
+
+            <?php
+            if (!isset($GLOBALS['mysqli']) || !($GLOBALS['mysqli'] instanceof mysqli)) {
+                if (!defined('FIDSI_DB_OPTIONAL')) {
+                    define('FIDSI_DB_OPTIONAL', true);
+                }
+                require_once __DIR__ . '/../setting.php';
+            }
+            require_once __DIR__ . '/../includes/blog.php';
+            $blogDb = ($GLOBALS['mysqli'] ?? null) instanceof mysqli ? $GLOBALS['mysqli'] : null;
+            $blogLatestPosts = $blogDb ? blog_latest_posts($blogDb, 5) : [];
+            if ($blogLatestPosts):
+            ?>
+            <div class="footer-latest">
+               <h2>Latest Posts</h2>
+               <ul>
+                  <?php foreach ($blogLatestPosts as $blogLatestPost): ?>
+                  <li>
+                     <a href="<?= blog_e(blog_post_path($blogLatestPost)) ?>"><?= blog_e($blogLatestPost['title']) ?></a>
+                     <time datetime="<?= blog_e((string) $blogLatestPost['published_at']) ?>"><?= blog_e(blog_display_date((string) $blogLatestPost['published_at'])) ?></time>
+                  </li>
+                  <?php endforeach; ?>
+               </ul>
+            </div>
+            <?php endif; ?>
             </div>
             
             <div class="pd_bottom_50"></div>
@@ -286,7 +312,7 @@
       <!--            <div class="col-lg-7 col-md-12 about_company_inner">-->
       <!--               <div class="abt_content">-->
       <!--                  <div class="logo">-->
-      <!--                     <img src="assets/images/logo-default.png" alt="img" class="company_logo_modal">-->
+      <!--                     <img src="/assets/images/logo-default.png" alt="img" class="company_logo_modal">-->
       <!--                  </div>-->
       <!--                  <div class="text">-->
       <!--                     <p> The great explorer of the truth, the master-builder of human happiness no one rejects-->
@@ -300,31 +326,31 @@
       <!--                     <div class="post_enable">-->
       <!--                        <div class="modal_post_grid">-->
       <!--                           <a href="blog-single.html">-->
-      <!--                              <img width="852" height="812" src="assets/images/blog/blog-image-9.jpg"-->
+      <!--                              <img width="852" height="812" src="/assets/images/blog/blog-image-9.jpg"-->
       <!--                                 class="main_img wp-post-image" alt="img" />-->
       <!--                           </a>-->
       <!--                        </div>-->
       <!--                        <div class="modal_post_grid">-->
       <!--                           <a href="blog-single.html">-->
-      <!--                              <img width="852" height="812" src="assets/images/blog/blog-image-8.jpg"-->
+      <!--                              <img width="852" height="812" src="/assets/images/blog/blog-image-8.jpg"-->
       <!--                                 class="main_img wp-post-image" alt="img" />-->
       <!--                           </a>-->
       <!--                        </div>-->
       <!--                        <div class="modal_post_grid">-->
       <!--                           <a href="blog-single.html">-->
-      <!--                              <img width="852" height="812" src="assets/images/blog/blog-image-7.jpg"-->
+      <!--                              <img width="852" height="812" src="/assets/images/blog/blog-image-7.jpg"-->
       <!--                                 class="main_img wp-post-image" alt="img" />-->
       <!--                           </a>-->
       <!--                        </div>-->
       <!--                        <div class="modal_post_grid">-->
       <!--                           <a href="blog-single.html">-->
-      <!--                              <img width="852" height="812" src="assets/images/blog/blog-image-6.jpg"-->
+      <!--                              <img width="852" height="812" src="/assets/images/blog/blog-image-6.jpg"-->
       <!--                                 class="main_img wp-post-image" alt="img" />-->
       <!--                           </a>-->
       <!--                        </div>-->
       <!--                        <div class="modal_post_grid">-->
       <!--                           <a href="blog-single.html">-->
-      <!--                              <img width="852" height="812" src="assets/images/blog/blog-image-5.jpg"-->
+      <!--                              <img width="852" height="812" src="/assets/images/blog/blog-image-5.jpg"-->
       <!--                                 class="main_img wp-post-image" alt="img" />-->
       <!--                           </a>-->
       <!--                        </div>-->

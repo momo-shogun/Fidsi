@@ -12,6 +12,10 @@ $mysqli = new mysqli($database_host, $database_username, $database_password, $da
 
 //output error and exit if there's an error
 if ($mysqli->connect_error) {
-    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+    if (defined('FIDSI_DB_OPTIONAL') && FIDSI_DB_OPTIONAL) {
+        $mysqli = null;
+    } else {
+        die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+    }
 }
 ?>
