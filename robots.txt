@@ -1,0 +1,69 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login.php
+Disallow: /includes/
+Disallow: /config/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /login.php
+
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /login.php
+
+# AI assistant / answer-engine bots (allowed — helps visibility in AI search results)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# AI training-data bots (blocked — do not allow content scraping for model training)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: MistralAI-User
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: BadBot
+Disallow: /
+
+# Block URL parameters and tracking junk from being crawled/indexed
+User-agent: *
+Disallow: /*?*
+
+
+# Sitemap
+Sitemap: https://fidsi.co.in/sitemap.xml
