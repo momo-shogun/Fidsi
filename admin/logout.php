@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once'../setting.php';
+include_once __DIR__ . '/../setting.php';
 session_destroy();
-header('location:index.php');
+header('Location: /admin');
 ?>
