@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once'../config/setting.php';
+include_once'../setting.php';
 if(isset($_POST['submit'])){
     $user = $_POST['username'];
     $pass = $_POST['password'];
