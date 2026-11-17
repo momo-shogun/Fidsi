@@ -84,7 +84,7 @@
   RewriteRule ^meet-our-team/?$ meet-our-team.php [L]
   RewriteRule ^members/?$ members.php [L]
   RewriteRule ^code-of-conduct/?$ code-of-conduct.php [L]
-  RewriteRule ^regulations-and-compliance/?$ regulationsandcompliance.php [L]
+  RewriteRule ^regulations-and-compliance/?$ regulations-and-compliance.php [L]
   RewriteRule ^government-industry-collaboration/?$ government-industry-collaboration.php [L]
   RewriteRule ^news/?$ news.php [L]
   RewriteRule ^gallery/?$ gallery.php [L]
