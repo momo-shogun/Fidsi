@@ -1,5 +1,4 @@
 
-
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php81” package as the default “PHP” programming language.
 <IfModule mime_module>
@@ -9,6 +8,8 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # --- Sitemap & Blog ---
   RewriteRule ^sitemap\.xml$ sitemap.php [L]
   RewriteRule ^blog/page/([0-9]+)/?$ blog.php [L]
   RewriteRule ^blog/?$ blog.php [L]
@@ -16,6 +17,7 @@
   RewriteRule ^blog/([a-z0-9-]+)/([a-z0-9-]+)/?$ blog.php [L]
   RewriteRule ^blog/([a-z0-9-]+)/?$ blog.php [L]
 
+  # --- Admin ---
   RewriteCond %{THE_REQUEST} \s/admin/index\.php[\s?] [NC]
   RewriteRule ^admin/index\.php$ /admin [R=301,L]
 
@@ -26,4 +28,69 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^admin/([A-Za-z0-9-]+)/?$ admin/$1.php [L,QSA]
+
+  # --- Public pages: 301 .php -> clean URL ---
+  RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+  RewriteRule ^index\.php$ / [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/about-us\.php[\s?] [NC]
+  RewriteRule ^about-us\.php$ /about-us [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/governingboard\.php[\s?] [NC]
+  RewriteRule ^governingboard\.php$ /governing-board [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/meet-our-team\.php[\s?] [NC]
+  RewriteRule ^meet-our-team\.php$ /meet-our-team [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/members\.php[\s?] [NC]
+  RewriteRule ^members\.php$ /members [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/code-of-conduct\.php[\s?] [NC]
+  RewriteRule ^code-of-conduct\.php$ /code-of-conduct [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/regulationsandcompliance\.php[\s?] [NC]
+  RewriteRule ^regulationsandcompliance\.php$ /regulations-and-compliance [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/regulations-and-compliance\.php[\s?] [NC]
+  RewriteRule ^regulations-and-compliance\.php$ /regulations-and-compliance [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/government-industry-collaboration\.php[\s?] [NC]
+  RewriteRule ^government-industry-collaboration\.php$ /government-industry-collaboration [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/news\.php[\s?] [NC]
+  RewriteRule ^news\.php$ /news [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/gallery\.php[\s?] [NC]
+  RewriteRule ^gallery\.php$ /gallery [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/ds-industry-report\.php[\s?] [NC]
+  RewriteRule ^ds-industry-report\.php$ /direct-selling-industry-report [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/contact-us\.php[\s?] [NC]
+  RewriteRule ^contact-us\.php$ /contact-us [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/joinfidsi\.php[\s?] [NC]
+  RewriteRule ^joinfidsi\.php$ /join-fidsi [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/newsletter\.php[\s?] [NC]
+  RewriteRule ^newsletter\.php$ /newsletter [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/privacy-policy\.php[\s?] [NC]
+  RewriteRule ^privacy-policy\.php$ /privacy-policy [R=301,L]
+
+  # --- Public pages: clean URL -> PHP file ---
+  RewriteRule ^about-us/?$ about-us.php [L]
+  RewriteRule ^governing-board/?$ governingboard.php [L]
+  RewriteRule ^meet-our-team/?$ meet-our-team.php [L]
+  RewriteRule ^members/?$ members.php [L]
+  RewriteRule ^code-of-conduct/?$ code-of-conduct.php [L]
+  RewriteRule ^regulations-and-compliance/?$ regulationsandcompliance.php [L]
+  RewriteRule ^government-industry-collaboration/?$ government-industry-collaboration.php [L]
+  RewriteRule ^news/?$ news.php [L]
+  RewriteRule ^gallery/?$ gallery.php [L]
+  RewriteRule ^direct-selling-industry-report/?$ ds-industry-report.php [L]
+  RewriteRule ^contact-us/?$ contact-us.php [L]
+  RewriteRule ^join-fidsi/?$ joinfidsi.php [L]
+  RewriteRule ^newsletter/?$ newsletter.php [L]
+  RewriteRule ^privacy-policy/?$ privacy-policy.php [L]
 </IfModule>

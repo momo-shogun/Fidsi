@@ -76,12 +76,12 @@
 
                               <ul class="menu">
                                  <li><a href="/">Home</a></li>
-                                 <li><a href="/about-us.php">About Us</a></li>
+                                 <li><a href="/about-us">About Us</a></li>
                                  <!--<li><a href="members.php">Our Members</a></li>-->
                                  <!--<li><a href="governingboard.php">Governing Board</a></li>-->
-                                 <li><a href="/newsletter.php">NewsLetter</a></li>
+                                 <li><a href="/newsletter">NewsLetter</a></li>
                              
-                                 <li><a href="/gallery.php">Gallery</a></li>
+                                 <li><a href="/gallery">Gallery</a></li>
                               </ul>
                            </div>
                         </div>
@@ -104,10 +104,10 @@
                                  <ul class="menu">
                                    
                                       <!--<li><a href="govtletter.php">Govt Letter</a></li>-->
-                                 <li><a href="/regulationsandcompliance.php">Acts and Rules</a></li>
-                                 <li><a href="/news.php">News</a></li>
+                                 <li><a href="/regulations-and-compliance">Acts and Rules</a></li>
+                                 <li><a href="/news">News</a></li>
                                     <!--<li><a href="disclaimer.php">Disclaimer</a></li>-->
-                                    <li><a href="/privacy-policy.php">Privacy Policy</a></li>
+                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
                                       
                                     
                                  </ul>
@@ -131,8 +131,8 @@
                            <div class="navigation_foo_inner">
 
                               <ul class="menu">
-                                 <li><a href="/joinfidsi.php">Join FIDSI</a></li>
-                                 <li><a href="/contact-us.php">Contact Us</a></li>
+                                 <li><a href="/join-fidsi">Join FIDSI</a></li>
+                                 <li><a href="/contact-us">Contact Us</a></li>
                                  <li><a href="/blog">Blog</a></li>
                                  <!--<li><a href="#">Sitemap</a></li>-->
                               </ul>
